@@ -8,13 +8,7 @@ const config = require('../config/config')[env];
 
 const db = {};
 
-let sequelize;
-
-if (config.dialect === 'postgres') {
-  sequelize = new Sequelize(config.url, config);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 fs
   .readdirSync(__dirname)
