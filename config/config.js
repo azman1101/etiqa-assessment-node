@@ -10,7 +10,7 @@ module.exports = {
     database: process.env.DATABASE_NAME,
     logging: (process.env.APPLICATION_DEBUG === 'true'),
   },
-  development: {
+  production: {
     dialect: 'mysql',
     host: 'eu-cdbr-west-03.cleardb.net',
     port: 3306,
