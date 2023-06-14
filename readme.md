@@ -1,61 +1,40 @@
-## QuickNode Framework
+# etiqa-assessment-node
 
-Simplified the setup of express node
+This is a web application designed as an assessment project to showcase my skills in Angular and Bootstrap. It allows companies to efficiently manage and collaborate with freelancers by providing CRUD functionality for freelancer profiles. The application offers a user-friendly interface and responsive design, ensuring a seamless experience across devices. This applications demonstrates my ability to develop robust web applications using modern front-end technologies while addressing the specific requirements of managing a network of freelancers.
+
+## Prerequisites
+
+Before running the application, ensure you have the following software installed:
+
+- Node.js and npm (Node Package Manager)
+- Angular CLI (Command Line Interface)
 
 ### Installation
 
 1. git clone this repo
-2. npm i
-
-### Development
-
-1. Sequelize is setup following this tutorial https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp
-1. If sequelize is not installed, globally, can use `npx sequelize-cli <command>`
-
-### ENV RC CONFIG
-
-1. copy the `envrc.example` to `.envrc` ans write your appropriate settings
-2. Install [DIRENV](https://direnv.net/docs/installation.html)
-3. Run below to activate your env setting
-
-- zsh
-
-```zsh
-eval "$(direnv hook zsh)"
-direnv allow
+```shell
+git clone git@github.com:azman1101/etiqa-assessment-node.git
 ```
 
-- bash
-
-```bash
-eval "$(direnv hook bash)"
-direnv allow
+2. Navigate into project directory
+```shell
+cd etiqa-assessment-node
 ```
 
-### Serve The App
-
-```zsh
-npx nodemon
+3. Install all dependencies
+```shell
+yarn
 ```
 
-### Database sequlize thingy (SQL)
-
-1. fresh migrate
-
-```zsh
-npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all
+4. Run the project
+```shell
+yarn start
 ```
 
-### Model & Seeder (example)
+### API Documentations
 
-```zsh
-npx sequelize-cli model:generate --name Role --attributes name:string
-npx sequelize-cli seed:generate --name role
-```
+The list of apis and how to use it can be view (here)[https://documenter.getpostman.com/view/6850084/2s93sf2WuL].
 
-### Visualize ERD
+## Features
 
-```zsh
-npm run erd
-```
-# etiqa-assessment-node
+- CRUD operations for freelancers, including creating, reading, updating, and deleting freelancer profiles.
